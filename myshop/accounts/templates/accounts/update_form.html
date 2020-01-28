@@ -1,0 +1,33 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-6 mx-auto mt-5">
+      <div class="card card-body">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="customer">Customer</label>
+            {{form.customer}}
+          </div>
+          <div class="form-group">
+            <label for="customer">Product</label>
+            {{form.product}}
+          </div>
+          <div class="form-group">
+            <label for="customer">Status</label>
+            {{form.status}}
+          </div>
+          <div class="form-group">
+            <label for="customer">Note</label>
+            {{form.note}}
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-info btn-block">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
